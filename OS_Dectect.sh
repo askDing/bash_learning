@@ -1,8 +1,5 @@
 #! /bin/bash
-# Description
-#
-# Usage:
-# ./aa.sh <param 1> <param 2> <param 3>
+# 这是探测系统平台的脚本
 
 if type wevtutil &> /dev/null
 then
