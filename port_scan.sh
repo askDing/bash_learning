@@ -6,5 +6,5 @@ echo "Usage:  sudo ./port_scan.sh"
 read -p "扫描的地址段(eg: 192.168.1.1/24): " target
 read -p "扫描报告保存路径和名称(eg: /path/to/name): " report_name
 
-sudo nmap -Pn -T5 -sSUV -nvv -A --open -p `cat port | xargs | tr ' ' ','` $target  -oA $report_name-`date "+%Y-%m-%d"`
+sudo nmap -T4 -sSUV -nvv -A --open -p `cat port | xargs | tr ' ' ','` $target  -oA $report_name-`date "+%Y-%m-%d"`
 
