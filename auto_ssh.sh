@@ -7,7 +7,10 @@ set user "root"
 set password "test123"
 
 spawn ssh $user@$server
-expect "*password*" {send "$password\n"}
+expect {
+  "*yes/no" {send "yes\n"; exp_continue }
+  "*password:" {send "$password\n"}
+}
 interact
 
 
