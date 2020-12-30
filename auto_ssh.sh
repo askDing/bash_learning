@@ -1,4 +1,4 @@
-#!/usr/bin/expect
+#!/usr/bin/expect -f
 set timeout 30
 set server "  "
 
