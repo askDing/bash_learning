@@ -10,7 +10,7 @@ set timeout 30
 spawn ssh $USER@$IP    
 
 expect {              
-  "*yes/no" {send "yes\n"; exp_continue}  
+  "*yes/no" {send "yes\n" }  
   "*password:" {send "$PASSWORD\n"}      
 }
 interact  
