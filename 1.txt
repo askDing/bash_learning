@@ -1,5 +1,0 @@
-#! /bin/bash
-
-echo -e "What is your name ? \c"
-read name
-echo "hello $name"
