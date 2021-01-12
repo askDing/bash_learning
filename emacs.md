@@ -22,7 +22,7 @@ EMACS(Editor MACroS)
    | `C-<字符>` | 在输入 `<字符>` 时按住 Control |
    | `M-<字符>` | 在输入 `<字符>` 时按住 Alt     |
    | `s-<字符>` | 在输入 `<字符>` 时按住 Super   |
-
+   | `M-x`      | 执行emacs命令|
 # Emacs帮助信息
 
  | key binding     | Description                           |
@@ -70,7 +70,7 @@ EMACS(Editor MACroS)
 
 ## 编辑文件/buffer
 ### 移动
-
+`C-t` 交换光标附近字符
 `C-u <num> <key>`  执行`<num>`次`<key>`
 
 ```zsh
