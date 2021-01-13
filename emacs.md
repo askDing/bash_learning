@@ -13,7 +13,10 @@ layout:
 - [x] 
 
 EMACS(Editor MACroS)
-
+```zsh
+brew tap d12frosted/emacs-plus
+brew install emacs-plus@27 --with-xwidgets
+```
 
 在 Emacs 中, 我们有一条规定:
 
@@ -23,6 +26,7 @@ EMACS(Editor MACroS)
    | `M-<字符>` | 在输入 `<字符>` 时按住 Alt     |
    | `s-<字符>` | 在输入 `<字符>` 时按住 Super   |
    | `M-x`      | 执行emacs命令|
+   | `C-g`      | 取消命令|
 # Emacs帮助信息
 
  | key binding     | Description                           |
@@ -31,7 +35,8 @@ EMACS(Editor MACroS)
    | `C-h k` | 帮助-快捷键     |
    | `C-h f` | 帮助-函数介绍functions |
    | `C-h v` | 帮助-变量介绍varialbes |
-
+   | `<Prefix> C-h` | 查看以Prefix开头的所有快捷键列表 |
+   
 
 # 窗口操作
 
@@ -67,11 +72,20 @@ EMACS(Editor MACroS)
 |------------|-------------|
 |`C-s` | 向下搜索 |
 |`C-r` | 向上搜索 |
+|`M-%` | 搜索并替换|
+
+- 'y' : 确认替换
+- 'n' : 跳到下一个
+- '!' : 强制替换所有
 
 ## 编辑文件/buffer
+
+- `M-x linum-mode` : 开启行号 
+
 ### 移动
-`C-t` 交换光标附近字符
-`C-u <num> <key>`  执行`<num>`次`<key>`
+- `C-t` 交换光标附近字符
+- `C-u <num> <key>`  执行`<num>`次`<key>`
+- `M-g g` 跳到指定行
 
 ```zsh
     |M-<(开头)					 :
@@ -124,6 +138,7 @@ C-l |						 :
 |key binding| Description |
 |----------|-------------|
 |`C-y` |粘贴|
+|`M-y` |粘贴上一次剪贴记录|
 
 
 ### 撤销/重做
@@ -140,8 +155,18 @@ C-l |						 :
 |`C-x s`|保存所有buffer到对应文件|
 
 
+# 版本控制
+- `C-x v C-h` :版本控制所有绑定快捷键
+-
 
 
 
+# 参考
 
+[emacs_guides
+](https://github.com/KitPixel/emacs-guides)
+[how_to_learn_emacs_en
+](https://david.rothlis.net/emacs/basic_c.html)
 
+[how_to_learn_emacs_zh
+](https://www.songofcode.com/how-to-learn-emacs-chinese-edition/)
