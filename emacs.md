@@ -85,6 +85,7 @@ brew install emacs-plus@27 --with-xwidgets
 ### 移动
 - `C-t` 交换光标附近字符
 - `C-u <num> <key>`  执行`<num>`次`<key>`
+- `M-<num>` :等价于`C-u <num>`
 - `M-g g` 跳到指定行
 
 ```zsh
@@ -138,7 +139,7 @@ C-l |						 :
 |key binding| Description |
 |----------|-------------|
 |`C-y` |粘贴|
-|`M-y` |粘贴上一次剪贴记录|
+|`M-y` |循环替换上一次剪贴记录|
 
 
 ### 撤销/重做
@@ -158,6 +159,22 @@ C-l |						 :
 # 版本控制
 - `C-x v C-h` :版本控制所有绑定快捷键
 -
+
+# 宏
+- `C-x (`或`F3` : 开始录制宏
+- `C-x )`或`F4` : 结束录制宏
+- `C-x e`或`F4` : 使用宏
+- `C-u 10 C-x e` :重复使用宏10次
+- `M-x name-last-kdb-macro <marco_name>` : 为宏命名
+- 在配置文件:`M-x insert-kbd-marco` : 保存宏
+- `M-x <macro_name>` : 调用宏
+
+Emacs宏生成序列:
+使用`kmacro-insert-counter`，默认情况下绑定(bind)到`C-x C-k TAB`。因此，对于您的示例，您将执行以下操作:
+`C-x ( C-x C-k TAB . RET C-x )`
+因此，开始宏，插入计数器，后跟“。”，换行符和结束宏。然后`C-x e e e e e e e`等。或`M-1 0 0 C-x e`得到100个。
+将计数器设置为初始值。例如，从1而不是0开始执行`M-1 C-x C-k C-c`。
+
 
 
 
