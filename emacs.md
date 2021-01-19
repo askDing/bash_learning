@@ -68,11 +68,11 @@ brew install emacs-plus@27 --with-xwidgets
 |`C-x C-f` | 查找/创建文件|
 
 ## 搜索
-|key binding| Description |
-|------------|-------------|
-|`C-s` | 向下搜索 |
-|`C-r` | 向上搜索 |
-|`M-%` | 搜索并替换|
+| key binding | Description |
+|-------------|-------------|
+| `C-s`       | 向下搜索    |
+| `C-r`       | 向上搜索    |
+| `M-%`       | 搜索并替换  |
 
 - 'y' : 确认替换
 - 'n' : 跳到下一个
@@ -83,7 +83,7 @@ brew install emacs-plus@27 --with-xwidgets
 - `M-x linum-mode` : 开启行号 
 
 ### 移动
-- `C-t` 交换光标附近字符
+- `C-t/M-t` 交换光标附近字符/单词
 - `C-u <num> <key>`  执行`<num>`次`<key>`
 - `M-<num>` :等价于`C-u <num>`
 - `M-g g` 跳到指定行
@@ -150,10 +150,11 @@ C-l |						 :
 |`C-_`|撤销/重做|
 
 ## 保存
-|key binding| Description |
-|----------|-------------|
-|`C-x C-s`|保存当前buffer到对应文件|
-|`C-x s`|保存所有buffer到对应文件|
+| key binding | Description              |
+|-------------|--------------------------|
+| `C-x C-s`   | 保存当前buffer到对应文件 |
+| `C-x C-w`   | 另存为                   |
+| `C-x s`     | 保存所有buffer到对应文件 |
 
 
 # 版本控制
