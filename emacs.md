@@ -15,7 +15,7 @@ layout:
 EMACS(Editor MACroS)
 ```zsh
 brew tap d12frosted/emacs-plus
-brew install emacs-plus@27 --with-xwidgets
+brew install emacs-plus@27 --without-spacemacs-icon
 ```
 
 在 Emacs 中, 我们有一条规定:
@@ -29,13 +29,22 @@ brew install emacs-plus@27 --with-xwidgets
    | `C-g`      | 取消命令|
 # Emacs帮助信息
 
- | key binding     | Description                           |
-   |------------|--------------------------------|
-   | `C-h t` | 帮助-教程tutorial |
-   | `C-h k` | 帮助-快捷键     |
-   | `C-h f` | 帮助-函数介绍functions |
-   | `C-h v` | 帮助-变量介绍varialbes |
-   | `<Prefix> C-h` | 查看以Prefix开头的所有快捷键列表 |
+ | key binding              | Description                      |
+ |--------------------------|----------------------------------|
+ | `C-h ?`                  | 帮助系统的帮助信息               |
+ | `F1/C-h`                 | 帮助系统                         |
+ | `C-h t`                  | 帮助-教程tutorial                |
+ | `C-h k`                  | 帮助-快捷键                      |
+ | `C-h f`                  | 帮助-函数介绍functions           |
+ | `C-h v`                  | 帮助-变量介绍varialbes           |
+ | `C-h w`                  | where-is打印当前buffer快捷键列表 |
+ | `C-h b`                  | 查看快捷键对应函数               |
+ | `find-funtion/variable ` | 查看函数/变量代码                |
+ | `find-face-definition`   | 查看face定义                     |
+ | `M-x apropos`            | 查看关键字的变量、函数、face等   |
+ | `M-x describ-face`       | 查看face的文档                   |
+ | `<Prefix> C-h`           | 查看以Prefix开头的所有快捷键列表 |
+   
    
 
 # 窗口操作
@@ -171,10 +180,20 @@ C-l |						 :
 - `M-x <macro_name>` : 调用宏
 
 Emacs宏生成序列:
-使用`kmacro-insert-counter`，默认情况下绑定(bind)到`C-x C-k TAB`。因此，对于您的示例，您将执行以下操作:
+1.
+2.
+3.
+...
+100.
+
+使用`kmacro-insert-counter`，默认情况下绑定(bind)到`C-x C-k TAB`。
+执行以下操作:
 `C-x ( C-x C-k TAB . RET C-x )`
-因此，开始宏，插入计数器，后跟“。”，换行符和结束宏。然后`C-x e e e e e e e`等。或`M-1 0 0 C-x e`得到100个。
-将计数器设置为初始值。例如，从1而不是0开始执行`M-1 C-x C-k C-c`。
+因此，开始宏，插入计数器，后跟`.`，换行符和结束宏。然后`C-x e e e e e e e`等。或`M-1 0 0 C-x e`得到100个。
+
+将计数器设置为初始值。例如，从1而不是0开始执行`M-1 C-x C-k C-c`,调用`kmacro-set-counter`函数,
+然后再定义宏`C-x ( C-x C-k TAB . RET C-x )`
+最后执行`C-x e e e e e e e`或者`M-1 0 0 C-x e`得到100个。
 
 
 
