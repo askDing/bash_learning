@@ -179,7 +179,7 @@ C-l |						 :
 - 在配置文件:`M-x insert-kbd-marco` : 保存宏
 - `M-x <macro_name>` : 调用宏
 
-Emacs宏生成序列:
+Emacs宏生成序列:  
 1.  
 2.  
 3.  
