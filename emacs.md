@@ -180,31 +180,27 @@ C-l |						 :
 - `M-x <macro_name>` : 调用宏
 
 Emacs宏生成序列:
-1.  
-2.  
-3.  
-...  
-100.  
+1. 
+2. 
+3. 
+... 
+100. 
 
-使用`kmacro-insert-counter`，默认情况下绑定(bind)到`C-x C-k TAB`。  
-执行以下操作:  
-`C-x ( C-x C-k TAB . RET C-x )`  
-因此，开始宏，插入计数器，后跟`.`，换行符和结束宏。  
-然后`C-x e e e e e e e`等。或`M-1 0 0 C-x e`得到100个。  
+执行以下操作: 
+`C-x ( C-x C-k TAB . RET C-x )` 
+解释:
+  * `C-x (`调用`kmarco-start-macro`函数 开始录制宏
+  * `C-x C-k TAB .`调用`kmacro-insert-counter`函数插入计数后跟`.` , `RET`按下回车
+  * `C-x )` 调用`kmacro-end-macro`函数，结束录制宏
 
-将计数器设置为初始值。例如，从1而不是0开始执行`M-1 C-x C-k C-c`,调用`kmacro-set-counter`函数,  
-然后再定义宏`C-x ( C-x C-k TAB . RET C-x )`  
-最后执行`C-x e e e e e e e`或者`M-1 0 0 C-x e`得到100个。
+开始宏，插入计数器，后跟`.`，换行符和结束宏。 
+然后`C-x e e e e e e e`等。或`M-1 0 0 C-x e`得到100个。 
+
+将计数器设置为初始值。例如， 
+从1而不是0开始执行`M-1 C-x C-k C-c`,调用`kmacro-set-counter`函数, 
+执行以下操作:
+  * `M-1 C-x C-k C-c`,调用`kmacro-set-counter`函数, 设置计数器初始值为1
+  * `C-x ( C-x C-k TAB . RET C-x )` 录制宏
+  * `C-x e e e e e e e`或者`M-1 0 0 C-x e`得到100个。
 
 
-
-
-# 参考
-
-[emacs_guides
-](https://github.com/KitPixel/emacs-guides)
-[how_to_learn_emacs_en
-](https://david.rothlis.net/emacs/basic_c.html)
-
-[how_to_learn_emacs_zh
-](https://www.songofcode.com/how-to-learn-emacs-chinese-edition/)
