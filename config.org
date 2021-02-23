@@ -1,0 +1,1319 @@
+* 快捷键列表
+** Apperance
+| Action                           | Keybindings | Function                      |
+|----------------------------------+-------------+-------------------------------|
+| Command Palette                  | M-x         | counsel-M-x                   |
+| Exit Palette                     |             | exit-minibuffer               |
+| Live Command logs                | C-M-x       | clm/toggle-command-log-buffer |
+| Command History                  |             | counsel-command-history       |
+| Google Search                    |             | counsel-google                |
+| W3C Web Color                    |             | counsel-colors-web            |
+| Calendar                         |             | calendar                      |
+| Discard                          | C-g         | minibuffer-keyboard-quit      |
+|----------------------------------+-------------+-------------------------------|
+| Edit Configuration               |             | edit_config                   |
+| Reload Configuration             |             | reload_config                 |
+| Change Varible                   |             | counsel-set-variable          |
+| Menu bar                         | M-`         | menu-bar-mode                 |
+| Tool bar                         |             | tool-bar-mode                 |
+|----------------------------------+-------------+-------------------------------|
+| Treemacs                         |             |                               |
+|----------------------------------+-------------+-------------------------------|
+| New Frame                        | C-x 5 C-f   | find-file-other-frame         |
+| Delete Frame                     | C-x 5 0     | delete-frame                  |
+| Delete Other Frame               | C-x 5 1     | delete-other-frame            |
+|                                  | s-<L/R>     | ns-prev/next-frame            |
+| Switch Frame                     | C-x 5  b    | switch-to-buffer-other-frame  |
+| Suspend Frame                    | C-z         | suspend-frame                 |
+|----------------------------------+-------------+-------------------------------|
+| Split Window Horizonal           | C-x -       | split-and-follow-horizontally |
+| Split Window Vertical            | C-x /       | split-and-follow-vertically   |
+| Switch Ohter Window              | C-x o       | other-window                  |
+| Switchq Ohter Window(more winds) | C-c C-x     | ace-window                    |
+| Delete Other Window              | C-x 1       | delete-other-windows          |
+|----------------------------------+-------------+-------------------------------|
+| Enlarg window-vertical           | C-x ^       | enlarge-window                |
+| Shrink window-vertical           |             | shrink-window                 |
+| Enlarg window-horizontal         | C-x }       | enlarge-window-horizontally   |
+| Shrink window-horizontal         | C-x {       | shrink-window-horizontally    |
+|----------------------------------+-------------+-------------------------------|
+| Scroll Down                      |             | scroll-up-command             |
+| Scroll Up                        |             | scroll-down-command           |
+| Scroll Right                     | C-x >       | scroll-right                  |
+| Scroll Left                      | C-x <       | scroll-left                   |
+|----------------------------------+-------------+-------------------------------|
+| Describe Package                 | C-h p       | describe-package              |
+| Install/Remove Source            |             | counsel-package               |
+| Update Package                   |             | auto-package-update-now       |
+|----------------------------------+-------------+-------------------------------|
+| Environment                      |             | setenv/getenv                 |
+| Language                         |             | set-language-environment      |
+| Language List                    | C-h L       | describe-language-environment |
+| Locale                           |             | set-locale-environment        |
+|----------------------------------+-------------+-------------------------------|
+| Suspend Emacs                    |             | suspend-emacs                 |
+| Quit  Emacs                      | C-x C-c     |                               |
+
+
+*** calendar
+- `.` Goto-Today
+- `M-{/}` 月份切换
+- `a/x` 显示节日
+
+
+
+** File
+
+| Action                  | Keybindings | Function                            |
+|-------------------------+-------------+-------------------------------------|
+| Open Recent File        | M-r         | counsel-buffer-or-recentf           |
+| Open/New File           | C-x C-f     | counsel-find-file                   |
+| Open  SubDirectory      |             | counsel-dired-jump                  |
+| Open Directory          |             | counsel-dired                       |
+| Open Project            | M-p         | counsel-projectile-with-project     |
+| Save File               | C-x C-s     | save-buffer                         |
+| Save as                 | C-x C-w     | write-buffer                        |
+|-------------------------+-------------+-------------------------------------|
+| Open Buffer List        | C-x C-b     | ibuffer                             |
+| Switch buffer (Project) |             | counsel-projectile-switch-to-buffer |
+| Switch buffer           | C-x b       | counsel-ibuffer                     |
+|                         | C-x <L/>    | previous/next-buffer                |
+| Save all buffer         | C-x s       | save-some-buffers                   |
+| Kill  buffer            | C-x k       | kill-this-buffer                    |
+
+
+*** 文件管理器Dired操作 #
+- C 复制文件                          
+- d 添加待删除标记                    
+- D 交互式立刻删除文件                
+- e 编辑文件                          
+- f 查找文件                          
+- g revert-buffer重新读取目录         
+- G 改变文件组权限                    
+- k 删除光标所在行(不删除文件)        
+- m 添加待操作标记                    
+- n 移动到下一行                      
+- o 新窗口打开光标所在处文件          
+- q 退出Dired                         
+- Q 对m后的文件进行字符串查找并替换   
+- R 重命名文件                        
+- u 撤销m的标记                       
+- v 查看文件                          
+- x 删除标记D的文件                   
+- Z 对文件进行压缩/解压操作           
+- ! 执行shell命令                     
+- + 创建目录                          
+- s 对文件清单进行重排序(日期/文件名) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+** Edit
+
+| Action                      | Keybindings | Function                             |
+|-----------------------------+-------------+--------------------------------------|
+| Undo                        | C-x u[C-/]  | undo                                 |
+| Redo                        | C-g C-x     | macro_redo                           |
+|-----------------------------+-------------+--------------------------------------|
+| Fold                        |             | hs-hide-all                          |
+| Unfold                      |             | hs-show-all                          |
+|-----------------------------+-------------+--------------------------------------|
+| make-marker                 | C-.         | set-mark-command                     |
+| marker-rectangle            | C-x SPC     | rectangle-mark-mode                  |
+| Select                      | M-=         | er/expand-region                     |
+| Expand Region               |             | =                                    |
+| Shrink Region               |             | -                                    |
+| Select All                  | C-x h       | mark-whole-buffer                    |
+|-----------------------------+-------------+--------------------------------------|
+| Copy                        | C-w         | kill-ring-save                       |
+| Copy Rectangle              |             | copy-rectangle-as-kill               |
+| Cut                         | M-w         | kill-region                          |
+| Cut Rectangle               |             | kill-rectangle                       |
+| Paste                       | C-y         | yank                                 |
+| Paste Rectangle             |             | yank-rectangle                       |
+| Clipboard                   | M-y         | counsel-yank-pop                     |
+|-----------------------------+-------------+--------------------------------------|
+| Move Line Up                | s-<UP>      | move-line-up                         |
+| Move Line Down              | s-<DOWN>    | move-line-down                       |
+| Copy Line Up                | s-S-<UP>    | copy-line-up                         |
+| Copy Line Down              | s-S-<DOWN>  | copy-line-down                       |
+|-----------------------------+-------------+--------------------------------------|
+| Indent Rigidly              | C-x <Tab>   | indent-rigidly                       |
+| Indent Region Left          |             | indent-rigidly-left                  |
+| Indent Region Right         |             | indent-rigidly-right                 |
+|-----------------------------+-------------+--------------------------------------|
+| Search                      | M-f         | swiper                               |
+| Search Tags                 | C-M-f       | counsel-imenu                        |
+| Replace                     | M-%         | query-replace                        |
+| Replace Regex               | C-M-%       | query-replace-regexp                 |
+|-----------------------------+-------------+--------------------------------------|
+| transpose-chars             | C-t         | transpose-chars                      |
+| transpose-words             | M-t         | transpose-words                      |
+| transpose-lines             | C-x C-t     | transpose-lines                      |
+| transpose-region            |             | transpose-regions                    |
+|-----------------------------+-------------+--------------------------------------|
+| Bookmark  Menu              |             | bookmark-bmenu-list                  |
+| Mark/Jump bookmark          | C-x r       | counsel-bookmark                     |
+| Delete bookmark             |             | bookmark-delete                      |
+| Rename bookmark             |             | bookmark-name                        |
+|-----------------------------+-------------+--------------------------------------|
+| Comment                     | M-/         | comment-line                         |
+|-----------------------------+-------------+--------------------------------------|
+| Set Counter Value           |             | kmacro-set-counter                   |
+| Add Counter Value           |             | kmacro-add-counter                   |
+| Insert Counter              |             | kmacro-insert-counter                |
+| Define Macro                | C-x (       | kmacro-start-macro                   |
+| Define Macro (with counter) |             | kmacro-start-macro-or-insert-counter |
+| Finish Macro                | C-x )       | kmacro-end-macro                     |
+| Name Macro                  |             | name-last-kbd-macro                  |
+| Edit Macro                  |             | edit-last-kbd-macro                  |
+| View Macro                  |             | kmacro-view-macro                    |
+| Save Macro (to File)        |             | insert-kbd-macro                     |
+| Call Macro                  | C-x e       | counsel-kmacro                       |
+|                             |             |                                      |
+
+
+- `M-c/u/l` 选中区域字母大/小写
+- `C-u <num> <key>`  执行`<num>`次`<key>`
+- `M-<num>` :等价于`C-u <num>`
+
+
+*** Bookmark-bmenu-mark
+
+ - d 待删除标记
+ - r 重命名
+ - s 保存全部书签
+ - f 显示光标处的书签
+ - m 待显示标记
+ - v 显示待显示标记的书签
+ - t 切换书签关联文件的路径的显示状态
+ - w 显示书签关联文件的路径名
+ - x 删除待删除标记的书签
+ - u 去掉书签上的待操作标记
+ - q 退出书签清单
+
+*** Move 
+
+#+begin_src 
+    |M-<(开头)					 :
+C-l |						 :
+T   |					       M-v(翻屏)
+    |C-a(行首)                                   :			C-e(行尾)
+    |M-a(句首)			      		 :            		M-e(句尾)
+    |				  		 :
+    |				  	       C-p(上行)
+    |				  	         :
+C-l |		     (左移字符/单词)C-b/M-b ...|_(光标) ....  C-f/M-f(右移字符/单词）    
+M   |                               	   	 :
+    |				  	       C-n(下行)
+    |				  	         :
+    |M-{(上一段)				 :  	                  M-} (下一段)
+    |C-x [ (上一页)			  	 :     	                  C-x ](下一页)
+    |				  		 :
+    |				 	       C-v(翻屏)
+    |                              	         :
+C-l |						 :
+L   |                                            :			 M->(结尾)
+#+end_src>
+
+
+*** Delete
+
+#+begin_example
+    |                                           :
+    |         C-x <DEL>(删除光标至行首)        ...|_(光标)...               C-k(光标至行尾、重复则删除换行符) M-k(删除句子)
+    |                                           :
+    |    (删除字符)<DEL>/(移除单词)M-<DEL>     ....|_(光标) ....  C-d(删除字符/M-d(移除单词）
+    |                                           :
+#+end_example
+
+
+*** Macro  
+- `M-x name-last-kdb-macro <marco_name>` : 为宏命名
+- 在配置文件:`M-x insert-kbd-marco` : 保存宏
+- `M-x <macro_name>` : 调用宏
+Emacs宏生成序列:  
+1.  
+2.  
+3.  
+...  
+100.  
+
+执行以下操作: 
+`C-x ( C-x C-k TAB . RET C-x )` 
+解释:
+  * `C-x (`调用`kmarco-start-macro`函数 开始录制宏
+  * `C-x C-k TAB .`调用`kmacro-insert-counter`函数插入计数后跟`.` , `RET`按下回车
+  * `C-x )` 调用`kmacro-end-macro`函数，结束录制宏
+
+开始宏，插入计数器，后跟`.`，换行符和结束宏。 
+然后`C-x e e e e e e e`等。或`M-1 0 0 C-x e`得到100个。 
+
+将计数器设置为初始值。例如， 
+从1而不是0开始执行`M-1 C-x C-k C-c`,调用`kmacro-set-counter`函数, 
+执行以下操作:
+  * `M-1 C-x C-k C-c`,调用`kmacro-set-counter`函数, 设置计数器初始值为1
+  * `C-x ( C-x C-k TAB . RET C-x )` 录制宏
+  * `C-x e e e e e e e`或者`M-1 0 0 C-x e`得到100个。
+
+
+** Goto
+| Action          | Keybindings | Function                          |
+|-----------------+-------------+-----------------------------------|
+| Goto Definition | M-.         | xref-find-definitions             |
+| Goto Reference  | M-?         | xref-find-references              |
+| Back            | M-,         | xref-pop-marker-stack             |
+|-----------------+-------------+-----------------------------------|
+| All Errors      |             |                                   |
+| Next Error      |             | next-error                        |
+| Previous Error  |             | previous-error                    |
+|-----------------+-------------+-----------------------------------|
+| Goto Char       |             | avy-goto-char-in-line             |
+| Goto Char       | C-s         | avy-goto-char                     |
+| Goto Line       | M-s         | avy-goto-line                     |
+|-----------------+-------------+-----------------------------------|
+| Next change     |             | highlight-changes-next-change     |
+| Previous change |             | highlight-changes-previous-change |
+|-----------------+-------------+-----------------------------------|
+
+
+** Run & Debug
+| Action             | Keybindings | Function                       |
+|--------------------+-------------+--------------------------------|
+| Compile Env        |             | compile-env                    |
+| Compile            |             | counsel-compile                |
+| Edit Compile       |             | counsel-compile-edit-command   |
+| Errors             |             | counsel-compilation-errors     |
+|--------------------+-------------+--------------------------------|
+| Application        |             | counsel-osx-app                |
+| Application(Linux) |             | counsel-linux-app              |
+|--------------------+-------------+--------------------------------|
+| Eval lisp          | M-:         | eval-expression                |
+| Eval Shell         | M-!         | shll-command                   |
+| Terminal           |             | counsel-switch-to-shell-buffer |
+|                    |             |                                |
+
+
+
+** Schedule
+
+*** Calendar
+
+Calendar模式支持各种方式来更改当前日期
+（这里的“前”是指还没有到来的那一天，“后”是指已经过去的日子）
+q 退出calendar模式
+C-f 让当前日期向前一天
+C-b 让当前日期向后一天
+C-n 让当前日期向前一周
+C-p 让当前日期向后一周
+M-} 让当前日期向前一个月
+M-{ 让当前日期向后一个月
+C-x ] 让当前日期向前一年
+C-x [ 让当前日期向后一年
+C-a 移动到当前周的第一天
+C-e 移动到当前周的最后一天
+M-a 移动到当前月的第一天
+M-e 多动到当前月的最后一天
+M-< 移动到当前年的第一天
+M-> 移动到当前年的最后一天
+
+Calendar模式支持移动多种移动到特珠日期的方式
+g d 移动到一个特别的日期
+o 使某个特殊的月分作为中间的月分
+. 移动到当天的日期
+p d 显示某一天在一年中的位置，也显示本年度还有多少天。
+C-c C-l 刷新Calendar窗口
+
+Calendar支持生成LATEX代码。
+t m 按月生成日历
+t M 按月生成一个美化的日历
+t d 按当天日期生成一个当天日历
+t w 1 在一页上生成这个周的日历
+t w 2 在两页上生成这个周的日历
+t w 3 生成一个ISO-SYTLE风格的当前周日历
+t w 4 生成一个从周一开始的当前周日历
+t y 生成当前年的日历
+
+EMACS Calendar支持配置节日：
+h 显示当前的节日
+x 定义当天为某个节日
+u 取消当天已被定义的节日
+e 显示所有这前后共三个月的节日。
+M-x holiday 在另外的窗口的显示这前后三个月的节日。
+
+另外，还有一些特殊的，有意思的命令：
+S 显示当天的日出日落时间(是大写的S)
+p C 显示农历可以使用
+g C 使用农历移动日期可以使用
+
+
+*** Diary
+
+
+当你创建了一个'~/diary'文件，你就可以使用calendar去查看里面的内容。你可以查看当天的事件，相关命令如下 ：
+d 显示被选中的日期的所有事件
+s 显示所有事件，包括过期的，未到期的等等
+
+创建一个事件的样例：
+02/11/1989
+Bill B. visits Princeton today
+2pm Cognitive Studies Committee meeting
+2:30-5:30 Liz at Lawrenceville
+4:00pm Dentist appt
+7:30pm Dinner at George's
+8:00-10:00pm concert
+
+创建事件的命令：
+i d 为当天日期添加一个事件
+i w 为当天周创建一个周事件
+i m 为当前月创建一个月事件
+i y 为当前年创建一个年事件
+i a 为当前日期创建一个周年纪念日
+i c 创建一个循环的事件
+
+
+** Help
+
+| Action                          | Keybindings | Function                         |
+|---------------------------------+-------------+----------------------------------|
+| Support Fonts                   |             | counsel-fonts                    |
+| Suppoert Colors                 |             | counsel-colors-emacs             |
+| Support Face                    |             | counsel-faces                    |
+|---------------------------------+-------------+----------------------------------|
+| Describe Symbol                 |             | counsel-describe-symbol          |
+| Describe Keybinding             | C-h b       | counsel-descbinds                |
+| List Keybinding                 | C-h C-h     | which-key-C-h-dispatch           |
+|---------------------------------+-------------+----------------------------------|
+| Describe Function               | C-h f       | counsel-describe-funtion         |
+| Describe Variable               | C-h v       | counsel-describe-variable        |
+|---------------------------------+-------------+----------------------------------|
+| Emacs Tutorial                  | C-h t       | help-with-tutorial               |
+| Emacs Tutorial(choose language) |             | help-with-tutorial-spce-language |
+|---------------------------------+-------------+----------------------------------|
+| Emacs Manual                    | C-h r       | info-emacs-manual                |
+| Emacs Mode                      |             | counsel-info-lookup-symbol       |
+| Introduce Emacs Lisp            |             | menu-bar-read-lispintro          |
+| Emacs Reference                 |             | menu-bar-read-lispref            |
+|---------------------------------+-------------+----------------------------------|
+| Emacs Psychotherapist           |             | doctor                           |
+|---------------------------------+-------------+----------------------------------|
+| About Emacs                     | C-h C-a     | about-emacs                      |
+| Emacs FAQ                       | C-h C-f     | view-emacs-FAQ                   |
+| About GNU                       | C-h g       | abount-gnu                       |
+
+
+
+
+
+
+
+* 基础配置
+
+** 绑定修饰键(Modifier Keys)
+[[http://ergoemacs.org/emacs/emacs_hyper_super_keys.html][Binding Modifier Keys]]    [[https://emacs.stackexchange.com/questions/26616/how-to-use-a-macs-command-key-as-a-control-key][Modifier Keys for OSX]]
+#+begin_src emacs-lisp
+
+(when (eq system-type 'darwin)                 ;; mac specific settings
+  (setq mac-control-modifier 'control          ;; 设置Control键为Control键
+	
+	mac-command-modifier 'meta             ;; 设置左Command键为Meta键
+	mac-right-command-modifier 'meta       ;; 设置右Command键为Meta键
+	
+	mac-option-modifier 'super             ;; 设置左Option键为Super键
+	mac-right-option-modifier 'hyper       ;; 设置右Option键为Hyper键
+	
+	mac-function-modifier 'nil   )         ;; 暂不设置Fn键作用
+)
+
+#+end_src
+
+** 字体字符集
+#+begin_src emacs-lisp
+(prefer-coding-system 'utf-8)
+(setq buffer-file-coding-system 'utf-8-unix
+      default-file-name-coding-system 'utf-8-unix
+      default-keyboard-coding-system 'utf-8-unix
+      default-process-coding-system '(utf-8-unix . utf-8-unix)
+      default-sendmail-coding-system 'utf-8-unix
+      default-terminal-coding-system 'utf-8-unix)
+(set-face-attribute 'default nil :font "Source Code Pro-15" ) 
+#+end_src
+
+** 窗格设置
+#+begin_src emacs-lisp
+;;(menu-bar-mode -1)                     ;;关闭菜单栏
+(tool-bar-mode -1)                       ;;关闭工具栏
+(set-scroll-bar-mode nil)                ;;关闭滚动条
+(global-tab-line-mode t)                 ;;启用标签页
+(load-theme 'tango-dark)                 ;;启动界面
+(setq-default cursor-type 'bar)          ;;光标为｜
+(tooltip-mode -1)                        ;;关闭帮助信息
+(auto-compression-mode t)
+(setq inhibit-startup-message t          ;; 禁止启动GNU Emacs主页面
+      gnus-inhibit-startup-message t    ;;关闭gnus启动时画面
+      visible-bell t
+      enable-recursive-minibuffers t
+      default-directory "~/"
+      time-stamp-active t
+      time-stamp-warn-inactive t
+      time-stamp-format "%Y-%02m-%02d %3a %02H:%02M:%02S %l"
+      )
+(setq default-frame-alist '(;; frame layout
+			    (frame-title-format "%b@Emacs")
+                            (menu-bar-mode 't)
+			    (tool-bar-mode -1)
+			    (scroll-bar-mode 't)
+			    (top . 95)
+			    (left . 350)
+			    ;;(when window-system (set-frame-size (selected-frame) 110 35))
+			    (width . 150)
+			    (height . 45)
+			    (load-theme 'tango-dark)                 ;;启动界面
+			    ;; UI color
+			    (background-color . "grey18")
+			    (foreground-color . "green")
+			    ;; mouse
+			    (mouse-color . "gold1")
+			    ;;menu bar
+			    (menu-bar-lines . 1)
+			    ;; tool bar
+			    (tool-bar-lines . 0)
+			    ;; fringe 
+			    (right-fringe)
+			    (fringe-mode 2)
+			    (left-fringe)
+			    ;;face setting
+			    (face-foreground 'highlight "whithe")
+			    (face-background 'highlight "blue")
+			    (face-foreground 'region "cyan")
+			    (face-background 'region "blue")
+			    (face-foreground 'diary-face "skyblue")
+			    (face-background 'holiday-face "slate blue")
+			    (face-foreground 'holiday-face "white")
+			    (face-foreground 'secondary-selection "skyblue")
+			    (face-background 'secondary-selection "darkblue")
+			    ))
+#+end_src
+
+** 文本设置
+#+begin_src emacs-lisp
+(setq default-major-mode 'org-mode             ;;默认模式为org-mode
+      indent-tabs-mode t                       ;;tab键锁进
+      default-tab-width 4                      ;;tab宽度
+      ;;line-spacing 1                         ;;设置行高
+      kill-ring-max 200                        ;;剪贴板最大200条
+      global-hungry-delete-mode t              ;; 贪婪删除模式
+      show-paren-style 'parenthesis 
+      fill-column 80  
+      auto-fill-mode t                         ;;空格换行
+      comment-auto-fill-only-comments t        ;;注释自动换行
+      sentence-end "\\([。！？]\\|……\\|[.?!][]\"')}]*\\($\\|[ \t]\\)\\)[ \t\n]*"
+      sentence-end-double-space nil            ;;支持中文符号
+      track-eol t                              ;; 当光标在行尾上下移动的时候，始终保持在行尾
+      scroll-margin 3                          ;; 滚动边距为3行
+      scroll-conservatively 10000              ;;滚动保留最大行数    
+      )
+(visual-line-mode t)                           ;;自动折行
+(global-linum-mode t)        
+(delete-selection-mode t)
+(global-font-lock-mode t)
+(column-number-mode t)
+(line-number-mode t)
+(show-paren-mode t)     
+(auto-image-file-mode t)
+;;(global-hl-line-mode t) 
+#+end_src
+
+
+** 编程设置
+#+begin_src emacs-lisp
+(setq auto-mode-alist
+      ;;关联文件后缀和模式
+      (append '(("\\.s?html?\\'" . html-helper-mode)
+                ("\\.asp\\'" . html-helper-mode)
+                ("\\.phtml\\'" . html-helper-mode)
+                ("\\.jsx\\'" . jsx-mode))
+              auto-mode-alist))
+
+(add-hook 'c-mode-hook '(lambda ()
+			  (c-set-style "k&r")))
+#+end_src
+
+
+** 时间和日记
+#+begin_src emacs-lisp
+(setq calendar-latitude +39.54  ;;地理位置
+      calendar-longitude +116.28
+      calendar-location-name "北京"  
+      ;;显示时间
+      display-time-interval      10
+      display-time-24hr-format   t   
+      display-time-day-and-date  t    
+      display-time-use-mail-icon t
+      calendar-load-hook '(lambda () ;;日历颜色
+			    (set-face-foreground 'diary-face "skyblue")
+			    (set-face-background 'holiday-face "slate blue")
+			    (set-face-foreground 'holiday-face "white"))
+      ;; 设置农历
+      chinese-calendar-celestial-stem  ["甲" "乙" "丙" "丁" "戊" "己" "庚" "辛" "壬" "癸"]            
+      chinese-calendar-terrestrial-branch  ["子" "丑" "寅" "卯" "辰" "巳" "戊" "未" "申" "酉" "戌" "亥"]
+
+      calendar-remove-frame-by-deleting t
+      mark-diary-entries-in-calendar t         ; 标记calendar上有diary的日期
+      mark-holidays-in-calendar nil            ; 为了突出有diary的日期，calendar上不标记节日
+      view-calendar-holidays-initially nil     ; 打开calendar的时候不显示一堆节日
+      ;;去掉西方节日
+      christian-holidays nil
+      hebrew-holidays nil
+      islamic-holidays nil
+      solar-holidays nil
+      ;;设定中国节日
+      general-holidays '((holiday-fixed 1 1 "元旦")
+			 (holiday-fixed 2 14 "情人节")
+			 (holiday-fixed 3 14 "白色情人节")
+			 (holiday-fixed 4 1 "愚人节")
+			 (holiday-fixed 5 1 "劳动节")
+			 (holiday-float 5 0 2 "母亲节")
+			 (holiday-fixed 6 1 "儿童节")
+			 (holiday-float 6 0 3 "父亲节")
+			 (holiday-fixed 7 1 "建党节")
+			 (holiday-fixed 8 1 "建军节")
+			 (holiday-fixed 9 10 "教师节")
+			 (holiday-fixed 10 1 "国庆节")
+			 (holiday-fixed 12 25 "圣诞节"))
+      ;; 日记
+      diary-file "~/.emacs.d/diary/diary"
+      diary-mail-addr "741474596@qq.com")
+(display-time-mode t) 
+#+end_src
+
+
+
+
+** 备份设置
+#+begin_src emacs-lisp
+(setq auto-save-interval 200  ;;输入超过120字符自动保存
+      auto-save-timeout  20   ;;15秒无动作自动保存
+      make-backup-files   t   
+      backup-by-copying   t   
+      delete-old-versions t
+      kept-new-versions   3
+      kept-old-versions   2
+      version-control t
+      backup-directory-alist "~/.backups/" 
+      ;; backup-directory-alist '(("." . "~/.backups/")) 
+      temporary-file-directory "~/.emacs.d/.temp/"
+      )
+(auto-save-mode t)  ;;自动保存模式auto-save-default t)  默认是开启,   auto-save-interval  默认5mins
+#+end_src
+
+** 其他
+#+begin_src emacs-lisp
+(fset 'yes-or-no-p 'y-or-n-p)
+(setq user-full-name "Mr.Frame"
+      user-mail-address "741474596@qq.com"
+      gc-cons-threshold (* 50 1000 1000)    ;;垃圾回收 gc-cons-threshold most-postive-fixnum
+      )
+#+end_src
+
+
+*** Emacs Server
+#+begin_src emacs-lisp
+(server-mode t)
+(server-start)
+#+end_src
+
+#+begin_src shell
+emacsclient --alternate-editor emacs  <filename>
+#+end_src
+
+
+
+* 第三方插件
+
+** 插件源
+设置插件更新源 :[[https://mirrors.tuna.tsinghua.edu.cn/help/elpa/][清华emacs源]]
+#+begin_src emacs-lisp
+(require 'package)
+(setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+
+;;(when (version< emacs-version "27.0")
+;;  (package-initialize))  有package.el的Emacs都不需要手动添加(package-initialize) 
+
+(unless package-archive-contents
+  (package-refresh-contents))
+(unless (package-installed-p 'use-package)  ;; 安装use-package包管理工具
+  (package-install 'use-package))
+;;(require 'use-package)
+(setq use-package-always-ensure t
+      use-package-expand-minimally t
+      ;;load-path (cons "/path/to/package_directory" load-path))    ;;加载自定义插件
+      )
+#+end_src
+
+** auto-package-update
+#+begin_src emacs-lisp    
+(use-package auto-package-update    ;;自动更新插件
+	     :custom
+	     (auto-package-update-interval 7)
+	     (auto-package-update-prompt-before-update t)
+	     (auto-pacakge-update-delete-old-versions t)
+	     (auto-package-updatehid-results t)
+	     :config
+	     (auto-package-update-maybe)
+	     (auto-package-update-at-time "06:00"))
+#+end_src
+
+
+** Ivy-Swiper-Counsel
+
+[[https://emacs-china.org/t/ivy/12091][ivy教程]]
+
+[[http://blog.lujun9972.win/emacs-document/blog/2018/06/04/ivy,-counsel-%E5%92%8C-swiper/index.html][ivy-counsel-swiper]]
+
+
+
+
+
+** emacs-counsel-tramp
+#+begin_src emacs-lisp
+#+end_src
+
+
+
+
+** Helpful
+[[https://github.com/Wilfred/helpful][More Settings]]
+
+ -   helpful-callable
+ -   helpful-function
+ -   helpful-macro
+ -   helpful-command
+ -   helpful-key
+ -   helpful-variable
+ -   helpful-at-point
+   #+begin_src emacs-lisp
+   (use-package helpful
+     :custom
+     (counsel-describe-function-function #'helpful-callable)
+     (counsel-describe-variable-function #'helpful-variable)
+   )
+   #+end_src
+
+
+
+
+
+** all-the-icons 
+
+#+begin_src emacs-lisp
+(use-package all-the-icons
+ :if (display-graphic-p)
+     :commands all-the-icons-install-fonts
+     :init
+     (unless (find-font (font-spec :name "all-the-icons"))
+     (all-the-icons-install-fonts t)))
+#+end_src
+
+** which-key
+   #+begin_src emacs-lisp
+     (use-package which-key
+       :init (which-key-mode)
+       :diminish which-key-mode
+       :config
+       (setq which-key-idle-delay 0.3))
+   #+end_src
+
+
+
+
+
+
+
+** command-log-mode
+这个插件需要加载cl库，但是这个库已经被弃用了，但不影响
+#+begin_src emacs-lisp
+(use-package command-log-mode
+  :config
+ (global-command-log-mode t))
+#+end_src
+
+** smart-mode-line
+#+begin_src emacs-lisp
+   (use-package smart-mode-line
+     :init
+     (setq sml/theme 'light)
+     (setq sml/no-confirm-load-theme t))
+(smart-mode-line-enable t)
+#+end_src
+
+
+
+
+
+
+
+** ace-window
+#+begin_src emacs-lisp
+(use-package ace-window
+  :bind
+  (("C-x C-x" . ace-window))
+  :init
+  (setq aw-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n))
+  (custom-set-faces
+   '(aw-leading-char-face ((t (:foreground "green" :weight normal :height 4.5))))
+   '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+   '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil))))))
+#+end_src
+
+
+
+
+
+
+
+
+
+
+** expand-region
+#+Begin_src emacs-lisp
+(use-package expand-region
+  :bind ("C-=" . er/expand-region))
+#+end_src
+
+** embrace
+#+begin_src emacs-lisp
+(use-package embrace
+  :bind
+  ("C-," . embrace-commander))
+#+end_src
+
+** 快速定位/瞬移 Avy
+#+begin_src emacs-lisp
+(use-package avy)
+#+end_src
+
+
+
+** Dired
+
+#+begin_src emacs-lisp
+(use-package all-the-icons-dired)
+(use-package dired
+  :hook (dired-mode . all-the-icons-dired-mode)
+  :config
+  (setq dired-recursive-deletes 'always)
+  (setq dired-recursive-copies 'always)
+  (setq ls-lisp-use-insert-directory-program nil))
+#+end_src
+
+*** 总览式文本搜索-Swiper
+#+begin_src emacs-lisp
+   (use-package swiper
+       :ensure t
+       :bind ("M-f" . swiper))
+(ivy-mode t)
+#+end_src
+
+
+
+
+*** Emacs常用命令优化集合- counsel
+   #+begin_src emacs-lisp
+   (use-package counsel
+     :bind (("M-x" . counsel-M-x)
+            ("C-M-f" . counsel-imenu)
+            ("C-x b" . counsel-ibuffer)
+            ("C-x C-f" . counsel-find-file)
+            ("C-h b" . counsel-descbinds)
+            ("M-p" . counsel-projectile)
+            ("M-r" . counsel-recentf)
+            ("C-h f" . counsel-describe-function)
+            ("C-h a" . counsel-apropos)
+            ("C-h v" . counsel-describe-variable)
+            ("C-h l" . counsel-library)
+            ("M-y" . counsel-yank-pop)
+            ("C-x r" . counsel-bookmark)
+            :map ivy-minibuffer-map
+            ("C-g" . minibuffer-keyboard-quit)
+            :map minibuffer-local-map
+            ("C-r" . 'counsel-minibuffer-history))
+     :config
+     (setq ivy-initial-inputs-alist nil))
+
+   (use-package counsel-osx-app)
+   (use-package counsel-tramp)
+   #+end_src
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*** 交互式命令补全接口-ivy
+#+begin_src emacs-lisp
+(use-package all-the-icons-ivy-rich
+  :init (all-the-icons-ivy-rich-mode 1)
+  :config
+  (setq all-the-icons-ivy-rich-icon-size 1.0)
+  (setq inhibit-compacting-font-caches t))
+
+(use-package ivy-rich     ;; for M-x
+  :init (ivy-rich-mode 1)
+  :custom
+  (ivy-rich-path-style 'abbrev)
+  :config
+  (setcdr (assq t ivy-format-functions-alist ) #'ivy-format-function-line)
+  (ivy-rich-modify-columns 'ivy-switch-buffer
+			   '((ivy-rich-switch-buffer-size (:align right))
+			     (ivy-rich-switch-buffer-major-mode (:width 20 :face error))))
+  (setq ivy-rich-display-transformers-list
+      '(ivy-switch-buffer
+        (:columns
+         ((ivy-rich-switch-buffer-icon (:width 2))
+          (ivy-rich-candidate (:width 30))
+          (ivy-rich-switch-buffer-size (:width 7))
+          (ivy-rich-switch-buffer-indicators (:width 4 :face error :align right))
+          (ivy-rich-switch-buffer-major-mode (:width 12 :face warning))
+          (ivy-rich-switch-buffer-project (:width 15 :face success))
+          (ivy-rich-switch-buffer-path (:width (lambda (x) (ivy-rich-switch-buffer-shorten-path x (ivy-rich-minibuffer-width 0.3))))))
+         :predicate
+         (lambda (cand) (get-buffer cand))))))
+
+(use-package ivy-avy
+  ;;:config
+  ;;(define-key ivy-minibuffer-map (kbd "M-s") 'ivy-avy)
+)
+
+(use-package ivy-posframe
+  :config
+  (setq ivy-posframe-parameters
+        '((left-fringe . 4)
+          (right-fringe . 4)))
+  ;;显示swiper 20条记录 其他函数40条记录
+  (setq ivy-posframe-height-alist '((swiper . 20)
+                                    (t      . 40)))
+  (setq ivy-posframe-display-functions-alist
+        '((swiper          . ivy-posframe-display-at-frame-center)
+          (complete-symbol . ivy-posframe-display-at-point)
+          (counsel-M-x     . ivy-posframe-display-at-frame-center)
+          (counsel-find-file . ivy-posframe-display-at-frame-center)
+          (ivy-switch-buffer . ivy-posframe-display-at-frame-center)
+          (bing-dict-brief .  ivy-posframe-display-at-frame-center)
+          (avy-goto-char .  ivy-posframe-display-at-frame-center)
+          (find-file-other-frame .  ivy-posframe-display-at-frame-center)
+          (t               . ivy-posframe-display))))
+(ivy-posframe-mode 1)
+#+end_src
+
+
+** exec-path-from-shell
+#+begin_src emacs-lisp
+#+end_src
+
+
+
+
+
+
+** Markdown
+#+Begin_src emacs-lisp
+(use-package markdown-mode
+    :commands (markdown-mode gfm-mode)
+    :mode (("README\\.md\\'" . gfm-mode)
+           ("\\.md\\'" . markdown-mode)
+           ("\\.markdown\\'" . markdown-mode))
+    :init (setq markdown-command                ;;暂时未用到
+                (concat
+                 "/usr/local/bin/pandoc"
+                 " --from=markdown --to=html"
+                 " --standalone --mathjax --highlight-style=pygments")))
+#+end_src
+
+
+
+** Org-mode
+#+begin_src emacs-lisp
+(use-package org)
+(require 'org-tempo) ;;支持Tab键补全代码块
+(add-to-list 'org-structure-template-alist '("sh" . "src shell"))
+(add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
+(add-to-list 'org-structure-template-alist '("py" . "src python"))
+#+end_src
+
+
+
+
+
+
+** 编程插件
+
+
+
+*** 语法检查 flycheck
+#+begin_src shell
+pip install pylint
+npm install eslint
+#+end_src
+
+[[https://www.flycheck.org/en/latest/][Flyc]]
+
+#+begin_src emacs-lisp
+(use-package flycheck
+  :init
+  (use-package flycheck-grammarly :defer t)
+  (if (display-graphic-p)
+      (use-package flycheck-posframe
+	:custom-face (flycheck-posframe-border-face ((t (:inherit default))))
+	:hook (flycheck-mode . flycheck-posframe-mode)
+	:custom
+	(flycheck-posframe-border-width 1)
+	(flycheck-posframe-inhibit-functions '((lambda (&rest _)
+						 (bound-and-true-p company-backend)))))
+    (use-package flycheck-pos-tip
+      :defines flycheck-pos-tip-timeout
+      :hook (flycheck-mode . flycheck-pos-tip-mode)
+      :custom (flycheck-post-tip-timeout 20)))
+  :hook (prog-mode . global-flycheck-mode)
+  :custom
+  (flycheck-global-modes '(not text-mode
+			       outline-mode
+			       fundamental-mode
+			       org-mode
+			       diff-mode
+			       shell-mode
+			       eshell-mode
+			       term-mode))
+  (flycheck-emacs-lisp-load-path 'inherit)
+  (flycheck-indication-mode 'right-fringe)
+  :config
+  (when (fboundp 'define-fringe-bitmap)
+    (define-fringe-bitmap 'flycheck-fringe-bitmap-double-arrow
+      [16 48 112 240 112 48 16] nil nil 'center))
+  (flycheck-add-mode 'javascript-eslint 'js-mode)
+  (flycheck-add-mode 'typescript-tslint 'rjsx-mode))
+#+end_src
+
+
+
+*** 代码片段 Yasnippet
+#+begin_src emacs-lisp
+;; (use-package yasnippet
+;;   :config
+;;   (setq yas-snippet-dirs
+;; 	'("~/.emacs.d/snippets"                       ;; personal snippets
+;;           "~/.emacs.d/snippets/collection/"           ;; foo-mode and bar-mode snippet collection
+;;           "~/.emacs.d/yasnippets/yasmate/snippets"    ;; the yasmate collection
+;;           ))
+;;   (yas-reload-all)
+;;   (yas-global-mode 1))
+
+;; (use-package yasnippet-snippets)
+#+end_src
+
+
+
+
+*** 模块化文本补全框架 Company
+
+[[https://github.com/sebastiencs/company-box][company-box]]
+#+begin_src emacs-lisp
+(use-package company
+  :custom
+  (company-minimun-prefix-length 2)
+  (company-idel-delay 0.2)
+  :config (setq company-backends '(company-bbdb 
+				   company-semantic
+				   company-cmake
+				   company-capf
+				   company-clang
+				   company-files
+				   (company-dabbrev-code company-gtags company-etags company-keywords)
+				   company-oddmuse
+				   company-dabbrev
+                                   ))
+  :bind
+  (:map company-active-map
+	("<tab>" . company-complete-selection)
+	("\C-p" . company-select-previous)
+	("\C-n" . company-select-next)
+	("\C-v" . company-next-page)
+	("\M-v" . company-previous-page))
+  		
+;;  (:map lsp-mode-map
+;;	("<tab>" . company-indent-or-complete-commpn))
+  :commands global-company-mode)
+(use-package company-box
+  :hook (company-mode . company-box-mode))
+
+;; (use-package company-anaconda
+;;   :config
+;;   (add-to-list 'company-backends 'company-anaconda)
+;;   (add-hook 'python-mode-hook 'anaconda-mode))
+#+end_src
+
+*** LSP-Mode
+
+[[https://github.com/emacs-lsp/lsp-ui][LSP-UI]]
+
+#+begin_src emacs-lisp
+(use-package lsp-mode
+  :config
+  (setq lsp-idle-delay 0.2
+	lsp-enable-symbol-highlighting t
+	lsp-enable-snippet t   ;; need company-mode
+	lsp-keymap-prefix "C-c l")
+  :hook (python . lsp)
+;;   	 (lsp-mode . lsp-enable-which-key-intergration))
+  :commands lsp lsp-deferred)
+
+(use-package lsp-ui
+  :config
+  (setq lsp-ui-sideline-show-hover t
+	lsp-ui-sideline-ignore-duplicate t
+	lsp-ui-sideline-delay 0.2
+	lsp-ui-doc-position 'bottom
+	lsp-ui-doc-alignment 'frame
+	lsp-ui-doc-header nil
+	lsp-ui-doc-include-signature t
+	lsp-ui-doc-use-childframe t)
+  :bind
+  (:map lsp-ui-mode-map
+	("M-." . lsp-ui-peek-find-definition)
+	("M-?" . lsp-ui-peek-find-references))
+  :commands lsp-ui-mode)
+
+ (use-package lsp-python-ms
+   :init
+   (setq lsp-python-ms-auto-install-server t
+         lsp-python-ms-python-executable "/usr/bin/python3")
+   :config
+   (setq lsp-pyls-server-command "/usr/local/bin/pyls")  ;;/usr/local/bin/pyls
+   :hook (python-mode . (lambda ()
+ 			 (require 'lsp-python-ms)
+ 			 (lsp-deferred))))
+#+end_src
+
+
+
+
+
+*** DAP-Mode
+#+begin_src emacs-lisp
+
+#+end_src
+
+
+
+
+
+** 学习插件
+
+*** 翻译 youdao-dictonary
+#+begin_src emacs-lisp
+(use-package youdao-dictionary
+  :config
+  (setq url-automactic-caching t
+	youdao-dictionary-search-history-file "~/.emacs.d/.youdao"
+	youdao-dictionary-use-chinese-word-segmentation t))
+#+end_src
+
+
+
+* 自定义函数
+
+** split-and-follow-horizontally
+#+begin_src emacs-lisp
+  (defun split-and-follow-horizontally ()
+    (Interactive)
+    (split-window-below)
+    (balance-windows)
+    (other-window 1))
+#+end_src
+
+** split-and-follow-vertically
+#+begin_src emacs-lisp
+  (defun split-and-follow-vertically ()
+    (interactive)
+    (split-window-right)
+    (balance-windows)
+    (other-window 1))
+#+end_src
+
+** move-line-up
+
+#+begin_src emacs-lisp
+(defun move-line-up ()
+  "Move Current Line UP."
+  (interactive)
+  (transpose-lines 1)
+  (previous-line 2))
+#+end_src
+
+** move-line-down
+#+begin_src emacs-lisp
+(defun move-line-down ()
+  "Move Current Line Down."
+  (interactive)
+  (next-line 1)
+  (transpose-lines 1)
+  (previous-line 1))
+#+end_src
+
+
+
+** copy-line-up
+#+begin_src emacs-lisp
+(defun copy-line-up ()
+  "Copy Line Up."
+  (interactive)
+  (kill-whole-line)
+  (yank)
+  (yank)
+  (previous-line 2))
+#+end_src
+
+
+
+** copy-line-down
+#+begin_src emacs-lisp
+(defun copy-line-down ()
+  "Copy Line Down."
+  (interactive)
+  (kill-whole-line)
+  (yank)
+  (yank)
+  (previous-line 1))
+#+end_src
+
+
+
+
+#+Begin_src emacs-lisp
+
+#+end_src
+
+#+begin_src emacs-lisp
+
+#+end_src
+
+
+
+#+begin_src emacs-lisp
+
+#+end_src
+
+
+#+begin_src emacs-lisp
+
+#+end_src
+
+
+
+
+
+
+
+
+** edit-config
+#+Begin_src emacs-lisp
+(defun edit-config()
+  "Visit configuration file and edit it. "
+  (interactive)
+  (find-file "~/.emacs.d/config.org"))
+#+end_src
+
+** reload-config
+#+begin_src emacs-lisp
+(defun reload-config()
+  "Reload configuration file and make it effective immediately."
+  (interactive)
+  (org-babel-load-file (expand-file-name "~/.emacs.d/config.org")))
+#+end_src
+
+
+
+
+
+
+
+
+
+* 快捷键绑定
+
+** 全局快捷键设定
+#+begin_src emacs-lisp
+(setq ibuffer-expert t)   ;; D kill buffer immediately
+
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
+(global-set-key (kbd "C-x -") 'split-and-follow-horizontally)
+(global-set-key (kbd "C-x /") 'split-and-follow-vertically)
+
+(global-set-key (kbd "s-<up>") 'move-line-up)
+(global-set-key (kbd "s-<down>") 'move-line-down)
+(global-set-key (kbd "s-S-<up>") 'copy-line-up)
+(global-set-key (kbd "s-S-<down>") 'copy-line-down)
+
+(global-set-key (kbd "C-.") 'set-mark-command) ;;设置标记快捷键
+(global-set-key (kbd "C-w") 'kill-ring-save) ;;复制
+(global-set-key (kbd "M-w") 'kill-region) ;; 剪贴
+
+(global-set-key (kbd "C-s") 'avy-goto-char)
+(global-set-key (kbd "M-s") 'avy-goto-line)
+(global-set-key (kbd "C-c e") 'edit-config)
+(global-set-key (kbd "C-c r") 'reload-config)
+(global-set-key (kbd "C-c d") 'youdao-dictionary-search-at-point-posframe)
+
+#+end_src
+
+
+** 特定模式快捷键设定
+
+#+begin_src emacs-lisp
+  (define-key ivy-minibuffer-map (kbd "M-s") 'ivy-avy)
+#+end_src
+
